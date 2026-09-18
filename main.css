@@ -655,3 +655,11 @@ button[type="submit"]:hover,
 button[type="submit"]:focus-visible {
 	background: var(--accent-strong);
 }
+
+.special-p {
+	font-size: 1.7rem;
+}
+
+.special-h1 {
+	padding: 62px 7px;
+}
