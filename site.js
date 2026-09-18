@@ -341,9 +341,22 @@
         function setupDownloadFeedback() {
             selectAll('a[download]').forEach((downloadLink) => {
                 downloadLink.addEventListener('click', () => {
+                    const originalContent = downloadLink.innerHTML;
+
                     downloadLink.setAttribute('aria-label', 'Download started');
+                    downloadLink.textContent = 'Download started';
+
+                    animate(downloadLink, [
+                        { transform: 'scale(1)' },
+                        { transform: 'scale(1.03)' },
+                        { transform: 'scale(1)' },
+                    ], {
+                        duration: 300,
+                        easing: 'ease-out',
+                    });
 
                     window.setTimeout(() => {
+                        downloadLink.innerHTML = originalContent;
                         downloadLink.removeAttribute('aria-label');
                     }, 1600);
                 });
