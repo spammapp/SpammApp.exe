@@ -521,25 +521,86 @@ footer p {
 @media (max-width: 640px) {
 	body {
 		padding-top: 12px;
+		padding-right: 14px;
+		padding-left: 14px;
 	}
 
 	header {
 		top: 8px;
-		margin-bottom: 84px;
+		margin-bottom: 64px;
 	}
 
 	nav {
-		align-items: stretch;
-		flex-direction: column;
-		gap: 8px;
+		padding: 10px;
 	}
 
 	nav ul {
-		justify-content: flex-start;
+		justify-content: space-between;
+		gap: 4px;
 	}
 
 	nav li:first-child {
-		margin-right: 0;
+		width: 100%;
+		margin-bottom: 4px;
+	}
+
+	nav li:not(:first-child) {
+		flex: 1 1 0;
+	}
+
+	nav li:not(:first-child) a {
+		padding-right: 6px;
+		padding-left: 6px;
+		text-align: center;
+	}
+
+	nav li:first-child a {
+		padding-left: 4px;
+	}
+
+	.hero-actions,
+	.download-actions {
+		align-items: stretch;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.button-link {
+		text-align: center;
+	}
+
+	.intro-grid,
+	.story-section {
+		gap: 24px;
+		margin-top: 88px;
+	}
+
+	.feature-card,
+	.contact-card {
+		min-height: 0;
+	}
+
+	.feature-card h2,
+	.contact-card h2 {
+		margin-top: 34px;
+	}
+
+	.download-panel {
+		gap: 22px;
+	}
+
+	.requirements-list div {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	.requirements-list span {
+		text-align: left;
+	}
+
+	data {
+		overflow-wrap: anywhere;
 	}
 
 	h1 {
