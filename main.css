@@ -629,3 +629,29 @@ footer p {
 		gap: 4px;
 	}
 }
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+input,
+textarea {
+	padding: 12px 14px;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: rgba(17, 25, 39, 0.78);
+	color: var(--ink);
+	font-family: Arial, sans-serif;
+	font-size: 0.95rem;
+}
+
+button[type="submit"] {
+	align-self: flex-start;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus-visible {
+	background: var(--accent-strong);
+}
